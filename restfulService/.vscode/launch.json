@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DemoApplication<serviceapi>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.serviceapi.serviceapi.DemoApplication",
+            "projectName": "serviceapi",
+            "args": ""
+        }
+    ]
+}

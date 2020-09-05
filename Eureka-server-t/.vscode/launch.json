@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-EurekaTestApplication<eureka-test>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.eureka.eurekatest.EurekaTestApplication",
+            "projectName": "eureka-test",
+            "args": ""
+        }
+    ]
+}
