@@ -1,0 +1,42 @@
+version: "3"
+services:
+
+  eureka-t:
+    image: eureka-t
+    container_name: eureka-t
+    ports:
+      - 8761:8761
+  mysqlcontainer:
+    image: mysql
+    container_name: mysqlcontainer
+    environment:
+      MYSQL_DATABASE: mysql
+      MYSQL_USER: arnob
+      MYSQL_PASSWORD: root123
+      MYSQL_ROOT_PASSWORD: root123
+
+  
+  service-t:
+    image: service-t
+    container_name: service-t
+    ports:
+      - 8080:8080
+    links:
+      - mysqlcontainer
+      - eureka-t
+    depends_on:
+      - mysqlcontainer
+      - eureka-t
+    
+  consumer-t:
+    image: consumer-t
+    container_name: consumer-t
+    ports:
+      - 9090:9090
+    links:
+      - eureka-t
+      - service-t
+
+    depends_on:
+      - service-t
+      - eureka-t

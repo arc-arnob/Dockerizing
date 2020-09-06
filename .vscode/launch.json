@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DemoApplication<api-consume>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.apiconsume.apiconsume.DemoApplication",
+            "projectName": "api-consume",
+            "args": ""
+        }
+    ]
+}

@@ -17,7 +17,7 @@ public class ApiController {
 
     @GetMapping("/get-all")
     public List<Object> getEmployees(){
-        String url = "http://localhost:8080/employees";
+        String url = "http://service/employees";
         Object result = restTemplate.getForObject(url, Object[].class);
 
         return Arrays.asList(result);

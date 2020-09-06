@@ -18,11 +18,12 @@ import org.springframework.web.client.RestTemplate;
 @EnableEurekaClient
 public class DemoApplication {
 	
+	
 	@Bean
 	@LoadBalanced
 	public RestTemplate getRestTemplate(){
 		return new RestTemplate();
-	}
+ 	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
