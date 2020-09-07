@@ -9,8 +9,11 @@ services:
   mysqlcontainer:
     image: mysql
     container_name: mysqlcontainer
+    volumes:
+     - ./docker/mysql/data:/var/lib/mysql:rw
+     - ./database/schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro
     environment:
-      MYSQL_DATABASE: mysql
+      MYSQL_DATABASE: employee
       MYSQL_USER: arnob
       MYSQL_PASSWORD: root123
       MYSQL_ROOT_PASSWORD: root123
